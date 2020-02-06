@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Conversor from './components/Conversor'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <h1 className="title">Conversor de moedas</h1>
+        <div className="linha">
+          <Conversor moedaA="BRL" moedaB="USD"></Conversor>
+          <Conversor moedaA="USD" moedaB="BRL"></Conversor>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="linha">
+          <Conversor moedaA="BRL" moedaB="CAD"></Conversor>
+          <Conversor moedaA="CAD" moedaB="BRL"></Conversor>
+        </div>
+        <div className="linha">
+          <Conversor moedaA="BRL" moedaB="EUR"></Conversor>
+          <Conversor moedaA="EUR" moedaB="BRL"></Conversor>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
